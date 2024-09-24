@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import Product from './Product';
+import Product from './Products';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);

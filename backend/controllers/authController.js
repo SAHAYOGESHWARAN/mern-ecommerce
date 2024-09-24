@@ -13,3 +13,20 @@ exports.register = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+
+const registerUser = (req, res) => {
+    // Logic for user registration
+    res.status(200).json({ message: 'User registered successfully!' });
+};
+
+const loginUser = (req, res) => {
+    // Logic for user login
+    res.status(200).json({ message: 'User logged in successfully!' });
+};
+
+module.exports = {
+    registerUser,
+    loginUser,
+};
+
