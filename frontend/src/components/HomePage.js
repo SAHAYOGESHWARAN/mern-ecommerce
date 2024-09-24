@@ -1,4 +1,5 @@
-// frontend/src/components/HomePage.js
+
+
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
 
@@ -16,9 +17,9 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>Products</h1>
-      <div className="product-list">
-        {products.map((product) => (
+      <h1>Product List</h1>
+      <div className="product-grid">
+        {products.map(product => (
           <Product key={product._id} product={product} />
         ))}
       </div>

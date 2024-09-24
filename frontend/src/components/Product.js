@@ -1,13 +1,14 @@
 
+
 import React from 'react';
 
 const Product = ({ product }) => {
   return (
-    <div className="product">
-      <h2>{product.name}</h2>
+    <div className="product-card">
+      <img src={product.image} alt={product.name} />
+      <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p>${product.price}</p>
-      <img src={product.imageUrl} alt={product.name} />
     </div>
   );
 };
