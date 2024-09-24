@@ -31,4 +31,18 @@ const Checkout = ({ onCheckout }) => {
   );
 };
 
+// frontend/src/components/Checkout.js
+const handleCheckout = async (totalAmount) => {
+    const response = await fetch('http://localhost:5000/api/payment/create-payment-intent', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ amount: totalAmount }),
+    });
+    const { clientSecret } = await response.json();
+    // Use clientSecret to confirm payment with Stripe.js
+  };
+  
+
 export default Checkout;
